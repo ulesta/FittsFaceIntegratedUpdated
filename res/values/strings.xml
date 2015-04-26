@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/* ======================================================================
+*  Copyright (c) 2014 Qualcomm Technologies, Inc. All Rights Reserved.
+*  QTI Proprietary and Confidential.
+*  =====================================================================
+*/-->
+<resources>
+
+    <string name="app_name">FittsFace</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    
+    
+    <string name="hello">FittsFaceActivity</string>
+    <string name="setuptitletext">FittsFace Parameters</string>
+    <string name="button01text">OK</string>
+    <string name="button02text">Save</string>
+    <string name="button03text">Exit</string>
+    <string name="paramlabelnavtext">Navigation method</string>
+    <string name="paramlabelselecttext">Selection method</string>
+    <string name="paramlabelparttext">Participant code</string>
+    <string name="paramlabelsesstext">Session code</string>
+    <string name="paramlabelblocktext">Block code</string>
+    <string name="paramlabelgrouptext">Group code</string>
+    <string name="paramlabelconditiontext">Condition code</string>
+    <string name="paramlabelmodetext">Mode</string>
+    <string name="paramlabeltrialstext">Number of trials (1D)</string>
+    <string name="paramlabeltargetstext">Number of circles (2D)</string>
+    <string name="paramlabelamplitudetext">Target amplitude (A)</string>
+    <string name="paramlabelwidthtext">Target width (W)</string>
+    <string name="paramvibrotactilefeedbacktext">Vibrotactile feedback</string>
+    <string name="paramauditoryfeedbacktext">Auditory feedback</string>
+	<string name="paramdebugtext">Debug</string>
+</resources>
