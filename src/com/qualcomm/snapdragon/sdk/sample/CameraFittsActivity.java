@@ -99,6 +99,11 @@ public class CameraFittsActivity extends Activity implements
 	MediaPlayer missSound, selectSound;
 	StringBuilder sb1, sb2, results;
 
+	double runningEstimatedX;
+	double runningEstimatedY;
+	double runningX;
+	double runningY;
+	
 	// new stuff to streamline calculation of Throughput
 	PointF[] from;
 	PointF[] to;
@@ -832,9 +837,9 @@ public class CameraFittsActivity extends Activity implements
 					// verticalGaze = faceArray[j].getEyeVerticalGazeAngle();
 				}
 
-				runningArrayX[runningCounter] = Math.sin(yaw * (Math.PI / 180))
+				runningX = runningArrayX[runningCounter] = Math.sin(yaw * (Math.PI / 180))
 						* SCALE_UNIT_CIRCLE_FOR_ROTATION;
-				runningArrayY[runningCounter] = Math.sin(pitch
+				runningY = runningArrayY[runningCounter] = Math.sin(pitch
 						* (Math.PI / 180))
 						* SCALE_UNIT_CIRCLE_FOR_ROTATION;
 
@@ -931,8 +936,10 @@ public class CameraFittsActivity extends Activity implements
 					}
 				}
 
-				drawView.setPointer(computeRunningAvg(runningArrayX),
-						-computeRunningAvg(runningArrayY));
+				runningEstimatedX = (1 - ALPHA) * runningEstimatedX + ALPHA * runningX;
+				runningEstimatedY = (1 - ALPHA) * runningEstimatedY + ALPHA * runningY;
+				
+				drawView.setPointer(runningEstimatedX, -runningEstimatedY);
 				setUI(numFaces, smileValue, leftEyeBlink, rightEyeBlink,
 						faceRollValue, yaw, pitch, gazePointValue,
 						horizontalGaze, verticalGaze);
