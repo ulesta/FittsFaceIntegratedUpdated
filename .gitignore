@@ -1,0 +1,6 @@
+.DS_Store
+Thumb.db
+desktop.ini
+node_modules
+bin/
+gen/
